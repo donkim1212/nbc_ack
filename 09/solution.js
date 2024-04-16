@@ -8,5 +8,7 @@
 function solution(n) {
     let end = n % 2 == 0 ? n : n - 1;
     if (end <= 2) return end;
-    return (end + 2) * Math.trunc(end / 4) + (end % 4 != 0 ? Math.trunc(end / 2) + 1 : 0);
+    let mult = Math.trunc(end / 4);
+    let mid = end % 4 != 0 ? Math.trunc(end / 2) + 1 : 0;
+    return (end + 2) * mult + mid;
 }
